@@ -37,7 +37,6 @@ class StudentController {
     return res.json(students);
   }
 
-  // Show
   async show(req, res) {
     const { id } = req.params;
 
@@ -50,7 +49,6 @@ class StudentController {
     return res.json(student);
   }
 
-  // Store
   async store(req, res) {
     const schema = Yup.object().shape({
       nome: Yup.string().required(),
@@ -59,7 +57,7 @@ class StudentController {
         .required(),
     });
 
-    // Validation
+
     if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: 'Validation error!' });
     }
@@ -81,14 +79,13 @@ class StudentController {
     }
   }
 
-  // Update
+
   async update(req, res) {
     const schema = Yup.object().shape({
       nome: Yup.string(),
       email: Yup.string().email(),
     });
 
-    // Validation
     if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: 'Validation error!' });
     }
@@ -131,7 +128,7 @@ class StudentController {
 
     await student.destroy();
 
-    return res.json({ success: 'Studant deleted with success' });
+    return res.json({ success: 'Student deleted with success' });
   }
 }
 
