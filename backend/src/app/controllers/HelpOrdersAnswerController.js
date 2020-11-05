@@ -16,9 +16,6 @@ class HelpOrdersAnswerController {
     return res.json(helpOrders);
   }
 
-  /**
-   * List all help orders without answer
-   */
   async index(req, res) {
     const helpOrders = await HelpOrders.findAll({
       where: { answer: null },
