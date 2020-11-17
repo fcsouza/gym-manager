@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import Sidebar from '../componets/Sidebar';
-import Header from '../componets/Header';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
 import { getToken } from '../services/storage';
 
 export default function RouteWrapper({
