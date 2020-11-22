@@ -22,8 +22,8 @@ export const CheckBar = styled.View`
   border-width: 1;
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 4;
-  padding-vertical: 12;
-  padding-horizontal: 8;
+  //padding-vertical: 12;
+  // BaseButtonpadding-horizontal: 8;
 `;
 
 export const CheckNumber = styled.Text`
